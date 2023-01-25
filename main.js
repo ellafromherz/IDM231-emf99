@@ -1,12 +1,7 @@
-const my_name = 'Ella'
-console.log(my_name);
+const my_name = 'ella'
 
- const colors = ["red", "white", "blue"]
- console.log(colors);
+function log_name() {
+  console.log('log_name', my_name)
+}
 
- const my_team = {
-  name: "Capitals"
-  
- };
-
- console.log('my_team name');
+log_name()
