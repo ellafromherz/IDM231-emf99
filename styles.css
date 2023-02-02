@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    
+}
+
+:root {
+    --color-screen: #e5f0e4;
+    --color-text: #1f2421;
+
+    --background: var(--color-screen);
+    --text: var(--color-text);
+}
+
+/* title font */
+@font-face {
+    font-family: 'Dream';
+    src: url('fonts/webfontkit-20230202-105138/dream_orphans-webfont.woff') format('woff');
+}
+
+/* body text */
+@font-face {
+    font-family: 'Poiret One';
+    src: url('fonts/webfontkit-20230130-211844/poiretone-regular-webfont.woff') format('woff');
+}
+
+body {
+    background-color: var(--background);
+    margin: 0.5rem;
+    padding: .5rem;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 1rem .5rem 1rem;
+    padding: 1rem 1rem .5rem 1rem;
+    font-family: 'Dream';
+    font-style: normal;
+    font-size: 50px;
+    color: var(--color-text);
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem 1rem 1rem 1rem;
+    padding: 0.5rem 1rem 1rem 1rem;
+    font-family: 'Poiret One' ;
+    font-style: normal;
+    font-size: 32px;
+    color: var(--color-text); 
+}
+
+h3 {
+    margin: 3rem 3rem 1rem 3rem;
+    padding: 1rem;
+    font-family: 'Dream';
+    font-style: normal;
+    font-size: 32px;
+    color: var(--color-text);
+}
+
+p {
+    margin: .5rem;
+    padding: .5rem;
+    font-family: 'Poiret One' ;
+    font-style: normal;
+    font-size: 24px;
+    color: var(--color-text); 
+}
+  
+  .container {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  
+  .item {
+    background-color: rgb(159, 172, 159);
+    /* border: 1px solid rgb(25, 34, 27); */
+    text-align: center;
+  }
+  
