@@ -24,6 +24,17 @@
     src: url('fonts/webfontkit-20230130-211844/poiretone-regular-webfont.woff') format('woff');
 }
 
+@font-face {
+    font-family: 'Alef';
+    src: url(fonts/webfontkit-20230203-203358/alef-regular-webfont.woff) format('woff');
+}
+
+/* title font ? */
+@font-face {
+    font-family: 'Aboreto';
+    src: url(fonts/webfontkit-20230130-210936/aboreto-regular-webfont.woff) format('woff');
+}
+
 body {
     background-color: var(--background);
     margin: 1rem;
@@ -36,7 +47,7 @@ h1 {
     align-items: center;
     margin: 2rem 1rem .5rem 1rem;
     padding: 1rem 1rem .5rem 1rem;
-    font-family: 'Dream';
+    font-family: 'Aboreto';
     font-style: normal;
     font-size: 50px;
     color: var(--color-text);
@@ -57,7 +68,7 @@ h2 {
 h3 {
     margin: 1rem;
     padding: 1rem;
-    font-family: 'Dream';
+    font-family: 'Aboreto';
     font-style: normal;
     font-size: 32px;
     color: var(--color-text);
