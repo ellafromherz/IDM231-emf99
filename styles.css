@@ -100,3 +100,28 @@ p {
     margin: .5rem;
     padding: .5rem;
   }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  label {
+    margin: 1rem;
+    padding: 1rem;
+    font-family: 'Aboreto';
+    font-style: normal;
+    font-size: 24px;
+    color: var(--color-text);
+  }
+
+  select {
+    background-color: rgb(242, 245, 242);
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-size: 20px;
+    color: var(--color-text);
+  }
