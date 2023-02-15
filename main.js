@@ -1,3 +1,6 @@
+// @ts-check
+
+
 const monthSelect = document.getElementById('month');
 const daySelect = document.getElementById('day');
 
