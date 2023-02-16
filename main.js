@@ -1,6 +1,7 @@
 // @ts-check
 
-
+const snake = document.getElementById('snake');
+const snakemp3 = document.getElementById('snakemp3')
 const monthSelect = document.getElementById('month');
 const daySelect = document.getElementById('day');
 
@@ -69,4 +70,9 @@ daySelect.addEventListener('change', function() {
   console.log('Selected month:', monthSelect.value);
   console.log('Selected day:', daySelect.value);
   console.log('Plant type:', plant_type);
+});
+
+
+snake.addEventListener('click', function() {
+  snakemp3.play();
 });
