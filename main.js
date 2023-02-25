@@ -34,6 +34,91 @@ if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
   plant_type = 'air plant'
 }
 
-alert('your plant type is: ' + plant_type);
+const plantObject = findPlant(plant_type);
+console.log(plantObject);
+//alert('your plant type is: ' + plant_type);
 
 });
+
+const data = [
+  {
+    name: 'succulents',
+    sound: 'audios/succulentcapricorn.mp3',
+    img:'images/capricorn.png',
+  },
+
+  {
+    name: 'spider plant',
+    sound: 'audios/spidersagittarius.mp3',
+    img:'images/sagittarius.png',
+  },
+
+  {
+    name: 'black orchid',
+    sound: 'audios/orchidscorpio.mp3',
+    img: 'images/scorpio.png',
+  },
+
+  {
+    name: 'peace lily',
+    sound: 'audios/lilylibra.mp3',
+    img: 'images/libra.png',
+  },
+
+  {
+    name: 'rubber tree',
+    sound: 'audios/rubbervirgo.mp3',
+    img: 'images/virgo.png',
+  },
+
+  {
+    name: 'monstera',
+    sound: 'audios/monsteraleo.mp3',
+    img: 'images/leo.png',
+  },
+
+  {
+    name: 'jade plant',
+    sound: 'audios/jadecancer.mp3',
+    img: 'images/cancer.png',
+  },
+
+  {
+    name: 'pothos',
+    sound: 'audios/pothosgemini.mp3',
+    img: 'images/gemini.png',
+  },
+
+  {
+    name: 'aloe vera',
+    sound: 'audios/aloetaurus.mp3',
+    img: 'images/taurus.png',
+  },
+
+  {
+    name: 'snake plant',
+    sound: 'audios/snakearies.mp3',
+    img: 'images/aries.png',
+  },
+
+  {
+    name: 'water lily',
+    sound: 'audios/waterlilypisces.mp3',
+    img: 'images/pisces.png',
+  },
+
+  {
+    name: 'air plant',
+    sound: 'audios/airaquarius.mp3',
+    img: 'images/aquarius.png',
+  },
+
+];
+
+
+function findPlant(plant_type) {
+  return data.find(plant => plant.name === plant_type);
+}
+
+
+
