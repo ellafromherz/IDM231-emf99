@@ -3,6 +3,7 @@
     text-decoration: none;
     
 }
+/* you can style the pop up with css media queries*/
 
 :root {
     --color-screen: #eaf0e4;
@@ -101,6 +102,7 @@ p {
     padding: .5rem;
   }
 
+  /*
   .menu {
     display: flex;
     justify-content: center;
@@ -124,4 +126,39 @@ p {
     font-style: normal;
     font-size: 20px;
     color: var(--color-text);
+  }
+  */
+
+  .calendar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  label {
+    margin: 1rem;
+    padding: 1rem;
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-size: 24px;
+    color: var(--color-text);
+  }
+
+  input {
+    margin: 1rem 0rem 1rem 1rem;
+    padding: .5rem;
+    background-color: rgb(242, 245, 242);
+    border: solid black .75px;
+  }
+
+  #submit {
+    padding: .3rem;
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-size: 20px;
+    color: var(--color-text);
+    background-color: rgb(242, 245, 242);
+    border: solid black .75px;
   }
