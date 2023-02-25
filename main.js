@@ -33,6 +33,7 @@ if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
 } else if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) {
   plant_type = 'air plant'
 }
+
 alert('your plant type is: ' + plant_type);
 
 });
