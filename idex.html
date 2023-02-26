@@ -28,11 +28,12 @@
             alt="aries"
             height="200"
             width="200">
+
             <audio
             id="snakemp3" src="audios/snakearies.mp3">
             </audio>
+
             <h3> SNAKE PLANT </h3>
-            <p> aries = snake plant</p>
         </button>
         
         <button class="item" id="aloe">
@@ -45,7 +46,6 @@
             src="audios/aloetaurus.mp3">
             </audio>
             <h3> ALOE VERA </h3>
-            <p> taurus = aloe vera</p>
         </button>
 
         <button class="item" id="pothos">
@@ -58,7 +58,6 @@
             src="audios/pothosgemini.mp3">
             </audio>
             <h3> POTHOS </h3>
-            <p> gemini = pothos </p>
         </button>
 
         <button class="item" id="jade">
@@ -71,9 +70,8 @@
             src="audios/jadecancer.mp3">
             </audio>
             <h3> JADE PLANT </h3>
-            <p> cancer = jade plant</p>
         </button>
-
+        
         <button class="item" id="monstera">
             <img 
             src="images/leo.png" 
@@ -84,7 +82,6 @@
             src="audios/monsteraleo.mp3">
             </audio>
             <h3> MONSTERA </h3>
-            <p> leo = monstera</p>
         </button>
 
         <button class="item" id="rubber">
@@ -97,7 +94,6 @@
             src="audios/rubbervirgo.mp3">
             </audio>
             <h3> RUBBER TREE </h3>
-            <p> virgo = rubber tree</p>
         </button>
 
         <button class="item" id="lily">
@@ -110,7 +106,6 @@
             src="audios/lilylibra.mp3">
             </audio>
             <h3> PEACE LILY </h3>
-            <p> libra = peace lily</p>
         </button>
 
         <button class="item" id="orchid">
@@ -123,7 +118,6 @@
             src="audios/orchidscorpio.mp3">
             </audio>
             <h3> BLACK ORCHID </h3>
-            <p> scorpio = black orchid</p>
         </button>
 
         <button class="item" id="spider">
@@ -136,8 +130,8 @@
             src="audios/spidersagittarius.mp3">
             </audio>
             <h3> SPIDER PLANT </h3>
-            <p> sagittarius = spider plant</p>
         </button>
+
         
         <button class="item" id="succulents">
             <img
@@ -149,7 +143,6 @@
             src="audios/succulentcapricorn.mp3">
             </audio>
             <h3> SUCCULENTS </h3>
-            <p> capricorn = succulents</p>
         </button>
 
         <button class="item" id="air">
@@ -162,7 +155,6 @@
             src="audios/airaquarius.mp3">
             </audio>
             <h3> AIR PLANT </h3>
-            <p> aquarius = air plant</p>
         </button>
 
         <button class="item" id="water">
@@ -175,9 +167,31 @@
             src="audios/waterlilypisces.mp3">
             </audio>
             <h3> WATER LILY </h3>
-            <p> pisces = water lily</p>
         </button>
       </div>
+
+
+
+        <button id="open_btn">open button</button>
+
+        <div id="plantModal" class="modal">
+        <!-- content -->
+            <div class="content">
+                <span class="close">&times;</span>
+                <div class="contentTwo">
+                    <div class= "content_pic" >
+                    <img class="plant_pic" src="images/"
+                    height="200"
+                    width="200">
+                    </div>
+                    <div class="content_text">
+                    <h3 class="plant_name"></h3>
+                    <p class="plant_sign"></p>
+                    <p class="plant_desc"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     <script src="main.js"></script>
       
