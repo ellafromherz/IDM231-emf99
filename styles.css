@@ -71,16 +71,16 @@ h3 {
     padding: 1rem;
     font-family: 'Aboreto';
     font-style: normal;
-    font-size: 32px;
+    font-size: 24px;
     color: var(--color-text);
 }
 
 p {
-    margin: .5rem;
-    padding: .5rem;
+    margin: 1rem;
+    padding: 1rem;
     font-family: 'Poiret One' ;
     font-style: normal;
-    font-size: 24px;
+    font-size: 20px;
     color: var(--color-text); 
 }
   
@@ -96,6 +96,7 @@ p {
     /* border: 1px solid rgb(25, 34, 27); */
     text-align: center;
     border: none;
+    border-radius: 50%;
   }
   
   img {
@@ -135,4 +136,75 @@ p {
     color: var(--color-text);
     background-color: rgb(242, 245, 242);
     border: solid black .75px;
+  }
+
+
+
+  /* modal */
+
+  #open_btn {
+    margin: 3rem;
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-size: 10px;
+    color: var(--color-screen);
+    background-color: var(--color-screen);
+    border: none;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  .content {
+   background-color: rgb(242, 245, 242);
+   margin: 15% auto;
+   padding: 20px;
+   border: 1px solid #888;
+   width: 80%;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+  }
+
+  .close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* modal when open */
+  .contentTwo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .25rem;
+    padding: .25rem;
+  }
+  .content_pic {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin: .25rem;
+    padding: .25rem;
+  }
+
+  .content_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: right;
+    margin: .25rem;
+    padding: .25rem;
   }
