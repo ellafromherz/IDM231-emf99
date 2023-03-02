@@ -140,17 +140,13 @@ p {
 
 
 
+
   /* modal */
 
   #open_btn {
-    margin: 3rem;
-    font-family: 'Poiret One';
-    font-style: normal;
-    font-size: 10px;
-    color: var(--color-screen);
-    background-color: var(--color-screen);
-    border: none;
+  visibility: hidden;
   }
+
   .modal {
     display: none;
     position: fixed;
@@ -162,6 +158,15 @@ p {
     overflow: auto;
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+  }
+
+  .modal.show {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
   }
 
   .content {
@@ -183,6 +188,8 @@ p {
     text-decoration: none;
     cursor: pointer;
   }
+
+
 
   /* modal when open */
   .contentTwo {
