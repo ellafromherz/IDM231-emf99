@@ -14,7 +14,7 @@ const succulents = document.getElementById('succulents');
 const air = document.getElementById('air');
 const waterLily = document.getElementById('water');
 
-//html
+//html for innerHTML? 
 const plantPic = document.querySelector('.plant_pic');
 const heading = document.querySelector('.plant_name');
 const sign = document.querySelector('.plant_sign');
@@ -35,32 +35,45 @@ submitBtn.addEventListener('click', () => {
   const month = datePick.getMonth() + 1;
   const day = datePick.getDate();
   modal.style.display = 'block';
+  modal.classList.toggle('show');
   let plant_type;
 
   if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
     plant_type = 'succulents'
+    updateModalContent(0)
   } else if ((month === 11 && day >= 22) || (month === 12 && day <= 21)) {
     plant_type = 'spider plant'
+    updateModalContent(1)
   } else if ((month === 10 && day >= 24) || (month === 11 && day <= 21)) {
     plant_type = 'black orchid'
+    updateModalContent(2)
   } else if ((month === 9 && day >= 23) || (month === 10 && day <= 23)) {
     plant_type = 'peace lily'
+    updateModalContent(3)
   } else if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) {
     plant_type = 'rubber tree'
+    updateModalContent(4)
   } else if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) {
     plant_type = 'monstera'
+    updateModalContent(5)
   } else if ((month === 6 && day >= 22) || (month === 7 && day <= 22)) {
     plant_type = 'jade plant'
+    updateModalContent(6)
   } else if ((month === 5 && day >= 21) || (month === 6 && day <= 21)) {
     plant_type = 'pothos'
+    updateModalContent(7)
   } else if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) {
     plant_type = 'aloe vera'
+    updateModalContent(8)
   } else if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) {
     plant_type = 'snake plant'
+    updateModalContent(9)
   } else if ((month === 2 && day >= 19) || (month === 3 && day <= 20)) {
     plant_type = 'water lily'
+    updateModalContent(10)
   } else if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) {
     plant_type = 'air plant'
+    updateModalContent(11)
   }
   
   const plantObject = findPlant(plant_type);
@@ -129,7 +142,7 @@ const data = [
   {
     heading: 'POTHOS',
     plantPic: 'images/gemini.png',
-    sign: 'POTHOS',
+    sign: 'GEMINI',
     desc: 'Geminis are known to be adaptable, so a Pothos, which is a versatile, easy-to-care-for plant, would be a good fit.',
     sound: 'audios/pothosgemini.mp3',
   },
@@ -165,13 +178,27 @@ const data = [
     desc: 'Aquarians are known to be independent and unique, so air plants, which can survive without soil, would be a good fit.',  
     sound: 'audios/airaquarius.mp3',
   },
-
 ];
 
 //plant type based on data, headings are in caps lock bc of font 
 function findPlant(plant_type) {
   return data.filter((plant) => plant.heading.toLowerCase() === plant_type.toLowerCase());
 }
+
+//update modal content
+function updateModalContent(plant) {
+  const modalTitle = document.querySelector('.plant_name');
+  const modalBody = document.querySelector('.plant_desc');
+  const modalPic = document.querySelector('.plant_pic');
+  const modalSign = document.querySelector('.plant_sign');
+
+  modalTitle.innerHTML = data[plant].heading;
+  modalBody.innerHTML = data[plant].desc;
+  modalPic.src = data[plant].plantPic;
+  modalSign.innerHTML = data[plant].sign;
+}
+
+
 
 //modal functions
 btn.onclick = function() {
