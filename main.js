@@ -1,6 +1,7 @@
 // @ts-check
 
 //plants
+const plantBtn = document.querySelector('.item');
 const snake = document.getElementById('snake');
 const aloe = document.getElementById('aloe');
 const pothos = document.getElementById('pothos');
@@ -19,6 +20,7 @@ const plantPic = document.querySelector('.plant_pic');
 const heading = document.querySelector('.plant_name');
 const sign = document.querySelector('.plant_sign');
 const desc = document.querySelector('.plant_desc'); 
+const sound = document.querySelector('.plant_audio')
 
 //modal
 var modal = document.getElementById('plantModal');
@@ -191,13 +193,23 @@ function updateModalContent(plant) {
   const modalBody = document.querySelector('.plant_desc');
   const modalPic = document.querySelector('.plant_pic');
   const modalSign = document.querySelector('.plant_sign');
+  const modalAudio = document.querySelector('.plant_audio');
 
   modalTitle.innerHTML = data[plant].heading;
   modalBody.innerHTML = data[plant].desc;
   modalPic.src = data[plant].plantPic;
   modalSign.innerHTML = data[plant].sign;
+  modalAudio.src = data[plant].sound;
 }
 
+
+/*//make items clickable
+plant_btn.addEventListener('click', function () {
+  modalTitle.innerHTML = data[plant].heading;
+  modalBody.innerHTML = data[plant].desc;
+  modalPic.src = data[plant].plantPic;
+  modalSign.innerHTML = data[plant].sign;
+});*/
 
 
 //modal functions
@@ -207,6 +219,7 @@ btn.onclick = function() {
 
 span.onclick = function() {
   modal.style.display = 'none';
+  sound.pause();
 }
 
 window.onclick = function(event) {
@@ -214,4 +227,3 @@ window.onclick = function(event) {
     modal.style.display = 'none';
   }
 }
-
