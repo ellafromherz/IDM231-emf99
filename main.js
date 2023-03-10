@@ -200,6 +200,7 @@ function updateModalContent(plant) {
   modalPic.src = data[plant].plantPic;
   modalSign.innerHTML = data[plant].sign;
   modalAudio.src = data[plant].sound;
+  sound.play();
 }
 
 
