@@ -1,7 +1,7 @@
 // @ts-check
 
 //plants
-const plantBtn = document.querySelector('.item');
+const plantBtn = document.getElementsByClassName('item');
 const snake = document.getElementById('snake');
 const aloe = document.getElementById('aloe');
 const pothos = document.getElementById('pothos');
@@ -29,6 +29,65 @@ var span = document.getElementsByClassName('close')[0];
 
 //submit button
 const submitBtn = document.getElementById('submit');
+
+
+//plant info
+succulents.addEventListener('click', function () {
+  updateModalContent(0)
+});
+
+spider.addEventListener('click', function () {
+  updateModalContent(1)
+});
+
+orchid.addEventListener('click', function () {
+  modal.style.display = 'block';
+  updateModalContent(2)
+});
+
+peaceLily.addEventListener('click', function () {
+  modal.style.display = 'block';
+  updateModalContent(3)
+});
+
+rubber.addEventListener('click', function () {
+  modal.style.display = 'block';
+  updateModalContent(4)
+});
+
+monstera.addEventListener('click', function () {
+  modal.style.display = 'block';
+  updateModalContent(5)
+});
+
+jade.addEventListener('click', function () {
+  modal.style.display = 'block';
+  updateModalContent(6)
+});
+
+pothos.addEventListener('click', function () {
+  modal.style.display = 'block';
+  updateModalContent(7)
+});
+
+aloe.addEventListener('click', function () {
+  modal.style.display = 'block';
+  updateModalContent(8)
+});
+
+snake.addEventListener('click', function () {
+  modal.style.display = 'block';
+  updateModalContent(9)
+});
+
+waterLily.addEventListener('click', function () {
+  updateModalContent(10)
+});
+
+air.addEventListener('click', function () {
+  modal.style.display = 'block';
+  updateModalContent(11)
+});
 
 
 submitBtn.addEventListener('click', () => {
@@ -202,15 +261,6 @@ function updateModalContent(plant) {
   modalAudio.src = data[plant].sound;
   sound.play();
 }
-
-
-/*//make items clickable
-plant_btn.addEventListener('click', function () {
-  modalTitle.innerHTML = data[plant].heading;
-  modalBody.innerHTML = data[plant].desc;
-  modalPic.src = data[plant].plantPic;
-  modalSign.innerHTML = data[plant].sign;
-});*/
 
 
 //modal functions
