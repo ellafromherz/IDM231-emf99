@@ -159,7 +159,6 @@ p {
     background-color: rgba(0,0,0,0.5);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
   }
 
   .modal.show {
