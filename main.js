@@ -34,62 +34,62 @@ const submitBtn = document.getElementById('submit');
 //plant info
 succulents.addEventListener('click', function () {
   modal.style.display = 'block';
-  updateModalContent(0)
+  updateModalContentClick(0)
 });
 
 spider.addEventListener('click', function () {
   modal.style.display = 'block';
-  updateModalContent(1)
+  updateModalContentClick(1)
 });
 
 orchid.addEventListener('click', function () {
   modal.style.display = 'block';
-  updateModalContent(2)
+  updateModalContentClick(2)
 });
 
 peaceLily.addEventListener('click', function () {
   modal.style.display = 'block';
-  updateModalContent(3)
+  updateModalContentClick(3)
 });
 
 rubber.addEventListener('click', function () {
   modal.style.display = 'block';
-  updateModalContent(4)
+  updateModalContentClick(4)
 });
 
 monstera.addEventListener('click', function () {
   modal.style.display = 'block';
-  updateModalContent(5)
+  updateModalContentClick(5)
 });
 
 jade.addEventListener('click', function () {
   modal.style.display = 'block';
-  updateModalContent(6)
+  updateModalContentClick(6)
 });
 
 pothos.addEventListener('click', function () {
   modal.style.display = 'block';
-  updateModalContent(7)
+  updateModalContentClick(7)
 });
 
 aloe.addEventListener('click', function () {
   modal.style.display = 'block';
-  updateModalContent(8)
+  updateModalContentClick(8)
 });
 
 snake.addEventListener('click', function () {
   modal.style.display = 'block';
-  updateModalContent(9)
+  updateModalContentClick(9)
 });
 
 waterLily.addEventListener('click', function () {
   modal.style.display = 'block';
-  updateModalContent(10)
+  updateModalContentClick(10)
 });
 
 air.addEventListener('click', function () {
   modal.style.display = 'block';
-  updateModalContent(11)
+  updateModalContentClick(11)
 });
 
 //date function
@@ -251,8 +251,6 @@ function findPlant(plant_type) {
 
 //update modal content
 function updateModalContent(plant) {
-  modal.classList.toggle('show');
-
   const modalTitle = document.querySelector('.plant_name');
   const modalBody = document.querySelector('.plant_desc');
   const modalPic = document.querySelector('.plant_pic');
@@ -266,10 +264,34 @@ function updateModalContent(plant) {
   modalAudio.src = data[plant].sound;
   
   sound.play();
+
   setTimeout(function() {
-    sound.pause();
-    sound.currentTime = 0;
-  }, 5000);
+  sound.pause();
+  sound.currentTime = 0;
+}, 9000);
+}
+
+//update modal content click
+function updateModalContentClick(plant) {
+  const modalTitle = document.querySelector('.plant_name');
+  const modalBody = document.querySelector('.plant_desc');
+  const modalPic = document.querySelector('.plant_pic');
+  const modalSign = document.querySelector('.plant_sign');
+  const modalAudio = document.querySelector('.plant_audio');
+
+  modalTitle.innerHTML = data[plant].heading;
+  modalBody.innerHTML = data[plant].desc;
+  modalPic.src = data[plant].plantPic;
+  modalSign.innerHTML = data[plant].sign;
+  modalAudio.src = data[plant].sound;
+  
+  sound.play();
+  
+  setTimeout(function() {
+  sound.pause();
+  sound.currentTime = 0;
+}, 9000);
+  modal.classList.toggle('show');
 }
 
 
