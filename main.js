@@ -33,10 +33,12 @@ const submitBtn = document.getElementById('submit');
 
 //plant info
 succulents.addEventListener('click', function () {
+  modal.style.display = 'block';
   updateModalContent(0)
 });
 
 spider.addEventListener('click', function () {
+  modal.style.display = 'block';
   updateModalContent(1)
 });
 
@@ -81,6 +83,7 @@ snake.addEventListener('click', function () {
 });
 
 waterLily.addEventListener('click', function () {
+  modal.style.display = 'block';
   updateModalContent(10)
 });
 
@@ -89,7 +92,7 @@ air.addEventListener('click', function () {
   updateModalContent(11)
 });
 
-
+//date function
 submitBtn.addEventListener('click', () => {
   const selectedDate = document.getElementById('datepicker').value;
   const datePick = new Date(selectedDate);
@@ -248,6 +251,8 @@ function findPlant(plant_type) {
 
 //update modal content
 function updateModalContent(plant) {
+  modal.classList.toggle('show');
+
   const modalTitle = document.querySelector('.plant_name');
   const modalBody = document.querySelector('.plant_desc');
   const modalPic = document.querySelector('.plant_pic');
@@ -259,7 +264,12 @@ function updateModalContent(plant) {
   modalPic.src = data[plant].plantPic;
   modalSign.innerHTML = data[plant].sign;
   modalAudio.src = data[plant].sound;
+  
   sound.play();
+  setTimeout(function() {
+    sound.pause();
+    sound.currentTime = 0;
+  }, 5000);
 }
 
 
