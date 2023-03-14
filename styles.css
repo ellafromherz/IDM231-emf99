@@ -128,7 +128,7 @@ p {
     border: solid black .75px;
   }
 
-  #submit {
+  .submit {
     padding: .3rem;
     font-family: 'Poiret One';
     font-style: normal;
@@ -142,10 +142,6 @@ p {
 
 
   /* modal */
-  #open_btn {
-  visibility: hidden;
-  }
-
   .modal {
     position: fixed;
     z-index: 1;
@@ -156,12 +152,6 @@ p {
     overflow: auto;
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.5);
-    visibility: hidden;
-  }
-
-  .modal.show {
-    visibility: visible;
-    transition-delay: 0s;
   }
 
   .content {
