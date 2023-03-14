@@ -23,9 +23,10 @@ const desc = document.querySelector('.plant_desc');
 const sound = document.querySelector('.plant_audio')
 
 //modal
-var modal = document.getElementById('plantModal');
-var btn = document.getElementById('open_btn');
-var span = document.getElementsByClassName('close')[0];
+//make const
+const modal = document.getElementById('plantModal');
+const btn = document.getElementById('open_btn');
+const closeBtn = document.getElementById('close');
 
 //submit button
 const submitBtn = document.getElementById('submit');
@@ -300,7 +301,7 @@ btn.onclick = function() {
   modal.style.display = 'block';
 }
 
-span.onclick = function() {
+closeBtn.onclick = function() {
   modal.style.display = 'none';
   sound.pause();
 }
