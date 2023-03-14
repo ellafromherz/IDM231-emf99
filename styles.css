@@ -147,7 +147,6 @@ p {
   }
 
   .modal {
-    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -157,12 +156,10 @@ p {
     overflow: auto;
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.5);
-    opacity: 0;
     visibility: hidden;
   }
 
   .modal.show {
-    opacity: 1;
     visibility: visible;
     transition-delay: 0s;
   }
