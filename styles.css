@@ -36,6 +36,18 @@
     src: url(fonts/webfontkit-20230130-210936/aboreto-regular-webfont.woff) format('woff');
 }
 
+/* unvisited link */
+a:link {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
 body {
     background-color: var(--background);
     margin: 1rem;
@@ -83,6 +95,24 @@ p {
     font-size: 20px;
     color: var(--color-text); 
 }
+
+.instructions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem .5rem 3rem .5rem;
+    padding: .5rem;
+ }
+
+ li {
+    margin: 1rem;
+    padding: 1rem;
+    font-family: 'Poiret One' ;
+    font-style: normal;
+    font-size: 24px;
+    color: var(--color-text); 
+ }
   
   .container {
     display: grid;
@@ -136,9 +166,53 @@ p {
     color: var(--color-text);
     background-color: rgb(242, 245, 242);
     border: solid black .75px;
+    transition: color .5s ease-in .5s,
+    ease-out .5s;
   }
 
 
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .help , .return {
+    padding: .5rem 3rem .5rem 3rem;
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-size: 24px;
+    color: var(--color-text);
+    background-color: rgb(242, 245, 242);
+    border: solid black .75px;
+    transition: color .5s ease-in .5s,
+    ease-out .5s;
+  }
+
+  .help:hover , .return:hover, .submit:hover {
+    background-color: rgb(96, 112, 96);
+    color: var(--color-screen);
+    border: solid var(--color-screen) .75px;
+  }
+
+  .arrow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    font-size: 30px;
+    width: 100%;
+    color: var(--color-text);
+    transition: color .5s ease-in .5s,
+    ease-out .5s;
+  }
+
+  .arrow:hover {
+    color: rgb(96, 112, 96);
+  }
 
 
   /* modal */
