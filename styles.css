@@ -193,13 +193,13 @@ p {
     ease-out .5s;
   }
 
-  .help:hover , .return:hover, .submit:hover {
-    background-color:var(--color-accent);
-    color: var(--color-screen);
-    border: solid var(--color-screen) .75px;
+  .help:hover , .return:hover , .submit:hover {
+  color: var(--color-screen);
+  background-color: var(--color-accent);
+  border: var(--color-screen);
   }
 
-  .arrow {
+  a.arrow {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -213,7 +213,7 @@ p {
   }
 
   .arrow:hover {
-    color: rgb(96, 112, 96);
+    color: palevioletred;
   }
 
 
