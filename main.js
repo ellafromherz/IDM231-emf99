@@ -1,7 +1,6 @@
 // @ts-check
 
 //plants
-const plantBtn = document.getElementsByClassName('item');
 const snake = document.getElementById('snake');
 const aloe = document.getElementById('aloe');
 const pothos = document.getElementById('pothos');
@@ -277,43 +276,3 @@ function updateModalContent(plant) {
 }, 9000);
 modal.hidden = false;
 }
-
-/*//update modal content click
-function updateModalContentClick(plant) {
-  const modalTitle = document.querySelector('.plant_name');
-  const modalBody = document.querySelector('.plant_desc');
-  const modalPic = document.querySelector('.plant_pic');
-  const modalSign = document.querySelector('.plant_sign');
-  const modalAudio = document.querySelector('.plant_audio');
-
-  modalTitle.innerHTML = data[plant].heading;
-  modalBody.innerHTML = data[plant].desc;
-  modalPic.src = data[plant].plantPic;
-  modalSign.innerHTML = data[plant].sign;
-  modalAudio.src = data[plant].sound;
-  
-  sound.play();
-  
-  setTimeout(function() {
-  sound.pause();
-  sound.currentTime = 0;
-}, 9000);
- modal.hidden = false;
-} */
-
-
-//modal functions
-/*btn.onclick = function() {
-  modal.style.display = 'block';
-}
-
-closeBtn.onclick = function() {
-  modal.style.display = 'none';
-  sound.pause();
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = 'none';
-  }
-}*/
