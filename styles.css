@@ -249,7 +249,7 @@ p {
     border: solid var(--color-accent) 1px;
     padding: .5rem;
     margin: 1rem;
-    border-radius: 100%;
+    border-radius: 20%;
     float: right;
     font-size: 30px;
   }
