@@ -12,7 +12,7 @@
 
     --background: var(--color-screen);
     --text: var(--color-text);
-    --accent: var(var(--color-accent))
+    --accent: var(--color-accent);
 }
 
 /* title font */
@@ -281,7 +281,6 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: right;
-    align-items: right;
     margin: .25rem;
     padding: .25rem;
   }  
