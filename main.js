@@ -28,6 +28,7 @@ const submitBtn = document.querySelector('.submit');
 const closeBtn = document.querySelector('.close');
 
 
+
 //modal functions
 submitBtn.addEventListener("click", () => {
   modal.hidden = !modal.hidden;
